@@ -67,7 +67,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 
 resource "aws_instance" "web_server" {
   ami                    = "ami-0aa7d40eeae50c9a9"
-  instance_type          = "t3.micro"
+  instance_type          = "t2.micro"
   key_name               = var.key_pair_name
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   user_data              = file("scripts/userdata.sh")
