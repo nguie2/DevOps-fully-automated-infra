@@ -29,6 +29,7 @@ resource "aws_security_group" "ec2_sg" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "allow ssh"
   }
 
   ingress {
@@ -36,6 +37,7 @@ resource "aws_security_group" "ec2_sg" {
     to_port     = 9100
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "allow node exporter"
   }
 
   ingress {
@@ -43,6 +45,7 @@ resource "aws_security_group" "ec2_sg" {
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "allow jenkins"
   }
 
   egress {
@@ -50,6 +53,7 @@ resource "aws_security_group" "ec2_sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+    description = "everyone leaves"
   }
 }
 
