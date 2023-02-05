@@ -63,6 +63,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 }
 
 
+#testing the web hook
 
 resource "aws_instance" "web_server" {
   ami                    = "ami-0aa7d40eeae50c9a9"
