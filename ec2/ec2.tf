@@ -66,7 +66,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 #testing the web hook
 
 resource "aws_instance" "web_server" {
-  ami                    = "ami-0aa7d40eeae50c9a9"
+  ami                    = "ami-0aa7d40eeae50c9a3"
   instance_type          = "t2.micro"
   key_name               = var.key_pair_name
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
